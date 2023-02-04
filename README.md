@@ -28,7 +28,7 @@ platform = atmelavr
 board = uno
 framework = arduino
 upload_protocol = custom
-upload_port = usb
+upload_port = /dev/ttyUSB0
 upload_flags =
     -C
     ; use "tool-avrdude-megaavr" for the atmelmegaavr platform
@@ -39,6 +39,7 @@ upload_flags =
     $UPLOAD_PORT
     -c
     stk500v2
+upload_command = avrdude $UPLOAD_FLAGS -U flash:w:$SOURCE:i
 ``` 
 ## FLASH USING ARDUINO IDE
 - Select `Atmel STK500 development board` from `Tools->Programmer`

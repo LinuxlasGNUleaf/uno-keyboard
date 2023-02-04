@@ -1,4 +1,3 @@
 #include <Arduino.h>
-void sendKey(char key);
-void sendKeycode(uint8_t keycode);
+void sendKeycode(uint8_t keycode, bool ctrl, bool alt, bool shift);
 void sendAndRelease(uint8_t *buf);
